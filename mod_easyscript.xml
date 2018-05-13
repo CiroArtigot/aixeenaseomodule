@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5.0"
+	client="site"
+	method="upgrade">
+	<name>Aixeena SEO - Easy Script</name>
+	<author>Ciro Artigot</author>
+	<creationDate>May 2018</creationDate>
+	<copyright>GNU/GPL license</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@aixeena.org</authorEmail>
+	<authorUrl>www.aixeena.org</authorUrl>
+	<version>4.0.0</version>
+	<description>Easy script is the simplest module you have ever seen. Just paste the code in the texareas or include a php file!</description>
+	<files>
+	<filename module="mod_easyscript">mod_easyscript.php</filename>
+	<filename>index.html</filename>
+    <folder>tmpl</folder>
+	</files>	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				
+				<field name="notel0033s" type="note" label="PHP code" description="Paste your HML code here." />
+				
+				<field name="Code" type="textarea" label="HTML code" rows="10" cols="50" default="" description="Just past the code here!" filter="raw"  />
+				
+				<field name="notel0033" type="note" label="PHP code" description="Paste your PHP code here without marks." />
+				
+				<field name="php" type="textarea" label="PHP code" rows="10" cols="50" default="" description="Just past the php here!" filter="raw"  />
+				
+				<field name="notel003s3s" type="note" label="CSS styles" description="Paste your CSS styles here." />
+				
+				<field name="css" type="textarea" label="CSS" rows="10" cols="50" default="" description="Just past the css here!" filter="raw"  />
+				
+				<field name="notel0d03s3s" type="note" label="Javascript code" description="Paste your javascript here." />
+				
+				<field name="script" type="textarea" label="Javascript" rows="10" cols="50" default="" description="Just past the javascript here!" filter="raw"  />
+				
+				<field name="notel001" type="note" class="alert alert-info" label="Include a PHP file" description="Select your uploaded file to the modules/mod_easyscript/tmpl/includes/ folder." />
+			
+				<field name="include" type="filelist" default="" label="Select a file" description="PHP include" directory="modules/mod_easyscript/tmpl/includes/" filter="" exclude="index.html" stripext="" />
+			
+				
+		</fieldset>
+		<fieldset name="advanced">
+
+
+		<field
+			name="myip"
+			type="text"
+			default=""
+			label="Show only with ip"
+			description="Debug / test your module and publish only by this IP" />
+		
+
+		<field
+			name="layout"
+			default="simple"
+			type="modulelayout"
+			label="JFIELD_ALT_LAYOUT_LABEL"
+			description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+		
+		<field
+			name="moduleclass_sfx"
+			type="text"
+			label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+			description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+		
+		<field
+			name="cache"
+			type="list"
+			default="1"
+			label="COM_MODULES_FIELD_CACHING_LABEL"
+			description="COM_MODULES_FIELD_CACHING_DESC">
+			<option
+			value="1">JGLOBAL_USE_GLOBAL</option>
+			<option
+			value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+		</field>
+		
+		<field
+			name="cache_time"
+			type="text"
+			default="900"
+			label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+			description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+		
+		<field
+			name="cachemode"
+			type="list"
+			default="safeuri">
+			<option value="itemid"></option>
+			<option value="safeuri"></option>
+			<option
+			value="static"></option>
+			</field>
+		
+	</fieldset>
+		</fields>
+	</config>
+</extension>
